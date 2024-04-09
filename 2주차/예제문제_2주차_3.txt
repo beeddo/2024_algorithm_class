@@ -1,0 +1,25 @@
+//40명의 학생의 성적의 평균을 구하는 알고리즘을 작성하시오.
+입력 data(40)
+출력 avg
+lcv(count=0),sum=0
+
+1.
+START
+ sum=0
+ count=0
+ while(count<40)do
+	read(data)
+	sum = sum+data
+	count = count + 1
+endwhile
+END
+
+2.
+START
+ sum=0
+ count=0
+ for count = 1 to 40 do
+	read(data)
+	sum=sum+data
+ endfor
+END

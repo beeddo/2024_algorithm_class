@@ -1,0 +1,22 @@
+//n개 자료의 값을 읽어 0이 아닌 값을 곱하여 출력
+//*n개의 데이터가 모두 0일 경우에는?
+START
+	read(n)
+
+	mult = 1
+	count = 0
+	allzero = 1 //*플래그 변수
+	
+
+	while(count < n)do
+		read(data)
+		if(data !=0) then
+			mult = mult * data
+			allzero = 0
+		endif
+		count = count + 1
+	endwhile
+
+	if(allzero==1) mult = 0
+	print(mult)
+END

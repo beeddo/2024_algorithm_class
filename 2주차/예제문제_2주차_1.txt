@@ -1,0 +1,11 @@
+// 두수와 연산자를 입력받아 결과값 출력하기
+
+START
+	read(a,b)
+	read(op)
+	if(op=='+') then c = a + b
+	if(op=='-') then c = a - b
+	if(op=='*') then c = a * b
+	if(op=='/') then c = a / b
+	print(c)
+END

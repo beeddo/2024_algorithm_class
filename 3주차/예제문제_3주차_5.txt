@@ -1,0 +1,27 @@
+//배열의 n개의 성적데이터를 읽어 평균을 구하고 평균과 평균 이상인 데이터의 수를 출력
+입력 n, scores(array)
+출력 avg, over_count
+배열의 최대 크기 설정 #define DMAX 100
+초기치 설정 sum = 0, over_count = 0, i = 0
+
+START
+//Part 1
+	sum = 0
+
+	read(n)
+	print("점수를 입력해주세요.")
+
+	for i = 0 to n - 1 do
+		read(scores(i))
+		sum = sum + scores(i)
+	endfor
+
+	avg = sum / n
+	print(avg)
+//Part2
+	over_count = 0
+	for i = 0 to n - 1 do
+		if(avg < scores(i)) then oevr_count++
+	endfor
+	print(over_count)
+END

@@ -1,0 +1,17 @@
+//양의 정수를 입력받아 그 수의 끝자리 숫자부터 출력하시오. 만약 num으로 1234가 입력되면, 출력은 4 3 2 1로 되도록
+입력 : num
+출력 : r
+
+START
+	num = 0
+	r = 0
+	
+	read(num)
+
+	while (num > 0) do
+		r = num % 10
+		num = num / 10
+		print(r)
+	endwhile
+
+END

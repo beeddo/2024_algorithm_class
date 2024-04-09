@@ -1,0 +1,24 @@
+//음수가 나올 때 까지 양수를 읽어 들여
+//읽어 들인 데이터 수와 최대 값을 출력하는 C프로그램을 출력하세요
+//(단 처음부터 음수를 입력하는 경우 "No data!"라고 출력하고 끝낸다)
+
+입력 : num
+출력 : size, max
+초기치 설정 : max와 size는 0으로 초기화
+
+START
+	size = 0
+	max = 0
+
+	read(num)
+
+	while (num > 0) do
+		size = size + 1
+		if (num > max) then max = num
+		read(num)
+	endwhile
+
+	print("데이터 수:",size)
+	if (size = 0) then print(NO data!)
+	else print("최대값:",max)
+END

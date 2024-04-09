@@ -1,0 +1,12 @@
+//세 수를 입력받아 가장 큰 값 출력하기(세 수가 다르게 입력된다는 가정하에 작성)
+
+START
+	read(n1,n2,n3)
+
+	if(n1>n3) then large = n1
+	else large = n2
+
+	if(n3>large) then large = n3
+
+	print(large)
+END
