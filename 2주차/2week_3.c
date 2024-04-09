@@ -13,5 +13,5 @@ void main()
 		sum += data[i];
 	}
 	avg = sum / 40;
-	printf("평균은 %d 입니.", avg);
+	printf("평균은 %d 입니다.", avg);
 }
