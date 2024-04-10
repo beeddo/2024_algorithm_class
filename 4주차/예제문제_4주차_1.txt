@@ -1,0 +1,45 @@
+//n명의 학생의 학번과 0~100점 사이의 학생 성적을 이차원 배열에 읽어 들여 성적의 평균과 최고점을 출력하고
+//학번을 입력하면 그의 등수를 출력하는 알고리즘
+
+Strat(main)
+	read(n)
+	print("input id and score :")
+
+	for i <- 0 to n-1 do
+		read(scores(1,0), score(1,1))
+	endfor
+
+	print("평균 :", find_avg(scores,n))
+	print("최대값 :", find_max(scores,n))
+	print("input student id to be searched ")
+	raand(sid)
+	print(sid, "의 등수", find_rank(scores,n,sid))
+End
+
+Start(find_avg(sdata,n))
+	sum = 0
+	for i <- 0 to n-1 do
+		sum = sum + sdata(i,1)
+	return sum/n
+End
+
+Start(find_max(sdata,n))
+	max=sdata(0,1)
+	for i <- i to n-1 do
+		if (sdata(i,1)>max)max=sdata(i,1)
+	return max
+End
+
+Start(find_rank(sdata,n,sid))
+	for i <- 0 to n-1 do
+		if(sid = sdata(i,0))
+			jumsu = sdata(i,1)
+			break
+		endif
+	endfor
+	rank = 0 ;
+	for i <- 0 to n-1 do
+		if(sdata(i,1)>jumsu) rank = rank + 1
+	endfor
+	return rank + 1
+End

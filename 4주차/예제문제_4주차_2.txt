@@ -1,0 +1,23 @@
+1. 다음의 main()을 이용하여 오늘 배운 gcd함수를 실행시켜 보자
+int gcd(int a, int y)
+
+main()
+{
+	int result;
+	int a, b, cond = 1;
+
+	while (cond){
+		printf("최대공약수를 구할 두 수를 입력 하세요");
+		scanf("%d %d", &a, &b); result = gcd(a,b);
+		printf("gcd(%d, %d)= %d \n\n",a,b,result);
+		printf("계속?(1/0)");
+		scanf("%d",&cond);
+	}
+}
+
+int gcd(int a, int b){
+	if(b==0)
+		return a;
+	else
+	return gcd(b, s%b);
+}
