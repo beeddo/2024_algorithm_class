@@ -1,4 +1,4 @@
-//»óÅÂ ÀüÀÌ ºĞ¼®
+//ìƒíƒœ ì „ì´ ë¶„ì„
 #define STAGE1 0
 #define STAGE2 1
 #define STAGE3 2
@@ -14,16 +14,16 @@ int is_digit(char c);
 //double pow(double x, double y);
 
 void main() {
-    printf("°è»ê±â ÇÁ·Î±×·¥À» ½ÃÀÛÇÕ´Ï´Ù. \n");
-    printf("½Ç¼öÇüÀÇ ÇÇ¿¬»êÀÚ¿Í »çÄ¢¿¬»êÀÚ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ½Ã¿À. \n");
-    printf("°á°ú¸¦ ¹ŞÀº ÈÄ ³¡³»·Á¸é ¹®ÀÚ x¸¦ ÀÔ·ÂÇÏ½Ã¿À \n");
+    printf("ê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ì„ ì‹œì‘í•©ë‹ˆë‹¤. \n");
+    printf("ì‹¤ìˆ˜í˜•ì˜ í”¼ì—°ì‚°ìì™€ ì‚¬ì¹™ì—°ì‚°ì ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. \n");
+    printf("ê²°ê³¼ë¥¼ ë°›ì€ í›„ ëë‚´ë ¤ë©´ ë¬¸ì xë¥¼ ì…ë ¥í•˜ì‹œì˜¤ \n");
     real_calculator();
-    printf("\n°è»ê±â ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù. \n");
+    printf("\nê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. \n");
 }
 
 void real_calculator(void) {
     double operand1 = 0, operand2 = 0;
-    char op, c; //c´Â null
+    char op, c; //cëŠ” null
     double result;
     int current_stage = STAGE1, status = 0;
 
@@ -39,7 +39,7 @@ void real_calculator(void) {
                 status = 0;
                 operand2 = 0;
             }
-            else if (c == '.') status = 1; //¼Ò¼ö
+            else if (c == '.') status = 1; //ì†Œìˆ˜
         }//STAGE1
 
         else if (current_stage == STAGE2) {
@@ -86,7 +86,7 @@ double real_operation(char op, double operand1, double operand2) {
         break;
     case '/':
         if (operand2 == 0) {
-            printf("\n0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.\n");
+            printf("\n0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
             result = operand1;
         }
         else
@@ -102,17 +102,17 @@ double real_operation(char op, double operand1, double operand2) {
 }
 
 double get_real(double current_operand, char c, int status) {
-    int part1; //status = 0ÀÏ¶§
-    double part2; //status = 1ÀÏ¶§
+    int part1; //status = 0ì¼ë•Œ
+    double part2; //status = 1ì¼ë•Œ
 
     if (status == 0) {
         part1 = c - '0';
-        current_operand *= 10; //10ÀÚ¸®¸¸Å­ ÀÚ¸®¼ö ÁöÁ¤
+        current_operand *= 10; //10ìë¦¬ë§Œí¼ ìë¦¬ìˆ˜ ì§€ì •
         current_operand += part1;
     }
-    else { //status°¡ 0ÀÌ ¾Æ´Ò¶§
+    else { //statusê°€ 0ì´ ì•„ë‹ë•Œ
         part2 = c - '0';
-        part2 = part2 * pow(10, -status);//10ÀÇ -status½Â(-1, -2½Â ,,,=0.1 , 0.01 ...)ÀÇ ÀÚ¸®¼ö
+        part2 = part2 * pow(10, -status);//10ì˜ -statusìŠ¹(-1, -2ìŠ¹ ,,,=0.1 , 0.01 ...)ì˜ ìë¦¬ìˆ˜
         current_operand += part2;
     }
     return current_operand;
