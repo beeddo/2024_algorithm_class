@@ -1,6 +1,9 @@
 #define STAGE1 0
 #define STAGE2 1
 #define STAGE3 2
+#include <stdio.h>
+#include <math.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 void int_calculator(void);
 int int_operation(char op, int op1, int op2);
@@ -9,11 +12,11 @@ int is_operator(char c);
 int is_digit(char c);
 
 void main() {
-	printf("°è»ê±â ÇÁ·Î±×·¥À» ½ÃÀÛÇÕ´Ï´Ù. \n");
-	printf("Á¤¼öÇüÀÇ ÇÇ¿¬»êÀÚ¿Í »çÄ¢¿¬»êÀÚ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ½Ã¿À. \n");
-	printf("°á°ú¸¦ ¹ŞÀº ÈÄ ³¡³»·Á¸é ¹®ÀÚ x¸¦ ÀÔ·ÂÇÏ½Ã¿À \n");
+	printf("ê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ì„ ì‹œì‘í•©ë‹ˆë‹¤. \n");
+	printf("ì •ìˆ˜í˜•ì˜ í”¼ì—°ì‚°ìì™€ ì‚¬ì¹™ì—°ì‚°ì ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. \n");
+	printf("ê²°ê³¼ë¥¼ ë°›ì€ í›„ ëë‚´ë ¤ë©´ ë¬¸ì xë¥¼ ì…ë ¥í•˜ì‹œì˜¤ \n");
 	int_calculator();
-	printf("\n°è»ê±â ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù. \n");
+	printf("\nê³„ì‚°ê¸° í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤. \n");
 }
 
 void int_calculator(void) {
@@ -66,23 +69,23 @@ int int_operation(char op, int operand1, int operand2) {
 		result = operand1 + operand2;
 		break;
 	case '-':
-		result = operand1 + operand2;
+		result = operand1 - operand2;
 		break;
 	case '*':
-		result = operand1 + operand2;
+		result = operand1 * operand2;
 		break;
 	case '/':
 		if (operand2 == 0) {
-			printf("\n0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.\n");
+			printf("\n0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 			result = operand1;
 		}
 		else
 		{
-			result = operand1 + operand2;
+			result = operand1 / operand2;
 			break;
 		}
-	case '^': //ÀÌºÎºĞ ÄÚµå ¿Ï¼ºÇÏ±â
-		result = operand1 ^ operand2;
+	case '^':
+		result = pow(operand1, operand2);
 		break;
 	}
 	return result;
