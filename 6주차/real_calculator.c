@@ -94,7 +94,7 @@ double real_operation(char op, double operand1, double operand2) {
             result = operand1 / operand2;
             break;
         }
-    case '^': 
+    case '^':
         result = pow(operand1, operand2);
         break;
     }
@@ -103,7 +103,7 @@ double real_operation(char op, double operand1, double operand2) {
 
 double get_real(double current_operand, char c, int status) {
     int part1; //status = 0일때
-    double part2; //status = 1일때
+    double part2 = 0.0; //status = 1일때
 
     if (status == 0) {
         part1 = c - '0';
@@ -137,4 +137,4 @@ int is_digit(char c) {
 //    else if (y == 1)return x;
 //    else if (y > 0) x * pow(x, y - 1);
 //   else return 1 / pow(x, -y);
-//}
+
