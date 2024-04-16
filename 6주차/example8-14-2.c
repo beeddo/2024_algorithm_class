@@ -16,37 +16,37 @@ void main() {
 	int key, i;
 	int sorted;
 
-	printf("µ¥ÀÌÅÍ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+	printf("ë°ì´í„° ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 	scanf("%d", &n);
 
-	printf("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+	printf("ë°ì´í„°ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 	input_function(list, n);
 	print_function(list, n);
 
-	printf("¿À¸§Â÷¼ø >> 1 | ³»¸²Â÷¼ø >> 2 : ");
+	printf("ì˜¤ë¦„ì°¨ìˆœ >> 1 | ë‚´ë¦¼ì°¨ìˆœ >> 2 : ");
 	scanf("%d", &sorted);
 
 	if (sorted == 1) {
 		upstep_selection_sort(list, n);
-		printf("¿À¸§Â÷¼øÀ¸·Î list¸¦ Á¤·ÄÇß½À´Ï´Ù. \n");
+		printf("ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ listë¥¼ ì •ë ¬í–ˆìŠµë‹ˆë‹¤. \n");
 		print_function(list, n);
 	}
 	else {
 		downstep_selection_sort(list, n);
-		printf("³»¸²Â÷¼øÀ¸·Î list¸¦ Á¤·ÄÇß½À´Ï´Ù. \n");
+		printf("ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ listë¥¼ ì •ë ¬í–ˆìŠµë‹ˆë‹¤. \n");
 		print_function(list, n);
 	}
-	printf("Ã£À¸·Á´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä ");
+	printf("ì°¾ìœ¼ë ¤ëŠ” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” ");
 	scanf("%d", &key);
 
 	if (sorted == 1 && (i = bsearch(list, n, key)) != -1) {
-		printf("%d´Â %d¹øÂ°¿¡ ÀÖ½À´Ï´Ù.", key, i + 1);
+		printf("%dëŠ” %dë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.", key, i + 1);
 	}
 	else if (sorted == 2 && (i = reburse_bsearch(list, n, key)) != -1) {
-		printf("%d´Â %d¹øÂ°¿¡ ÀÖ½À´Ï´Ù.", key, i + 1);
+		printf("%dëŠ” %dë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.", key, i + 1);
 	}
 	else
-		printf("%d´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.", key);
+		printf("%dëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.", key);
 }
 
 int bsearch(int a[], int n, int key) {
