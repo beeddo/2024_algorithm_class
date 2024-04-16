@@ -13,22 +13,22 @@ void main() {
 	char sorted;
 
 	print_function(list, n);
-	printf("µ¥ÀÌÅÍ°¡ Á¤·ÄµÇ¾î ÀÖ³ª¿ä? (y/n) ");
+	printf("ë°ì´í„°ê°€ ì •ë ¬ë˜ì–´ ìˆë‚˜ìš”? (y/n) ");
 	scanf("%c", &sorted);
 
 	if (sorted == 'n') {
 		selection_sort(list, n);
-		printf("list¸¦ Á¤·ÄÇß½À´Ï´Ù. \n");
+		printf("listë¥¼ ì •ë ¬í–ˆìŠµë‹ˆë‹¤. \n");
 		print_function(list, n);
 	}
-	printf("Ã£À¸·Á´Â °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä ");
+	printf("ì°¾ìœ¼ë ¤ëŠ” ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” ");
 	scanf("%d", &key);
 
 	if ((i = bsearch(list, n, key)) != -1) {
-		printf("%d´Â %d¹øÂ°¿¡ ÀÖ½À´Ï´Ù.", key, i + 1);
+		printf("%dëŠ” %dë²ˆì§¸ì— ìˆìŠµë‹ˆë‹¤.", key, i + 1);
 	}
 	else
-		printf("%d´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.", key);
+		printf("%dëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.", key);
 }
 
 int bsearch(int a[], int n, int key) {
