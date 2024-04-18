@@ -9,15 +9,15 @@ void main() {
 	int n;
 	int table[MAX_SIZE][MAX_SIZE];
 
-	printf("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë§ˆë°©ì§„ì˜ í¬ê¸°ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” : ");
 	scanf("%d", &n);
 
 	if ((n<1 || n>MAX_SIZE)) {
-		printf("»çÀÌÁî°¡ ¹üÀ§¸¦ ¹þ¾î³µ½À´Ï´Ù.");
+		printf("ìµœëŒ€ í¬ê¸°ëŠ” 15ìž…ë‹ˆë‹¤.");
 		exit(0);
 	}
 	if (!(n % 2)) {
-		printf("»çÀÌÁî´Â È¦¼ö¸¸ °¡´ÉÇÕ´Ï´Ù.");
+		printf("í™€ìˆ˜ë§Œ ìž…ë ¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 		exit(0);
 	}
 
